@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须和Mapper接口的全类名一致 -->
+<mapper namespace="com.mybatis.mapper.UserMapper">
+
+    <!-- id必须和接口里的方法名一致，resultType是返回的实体类全类名 -->
+    <select id="selectById" resultType="com.mybatis.entity.User">
+        <!-- SQL语句：查询id=参数的用户 -->
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+</mapper>
