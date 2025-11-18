@@ -1,0 +1,506 @@
+
+
+
+# 用户角色
+role:
+# query-role:
+# 一定要保留list和permission
+ list:
+  summary: 获取角色名称列表（条件）
+# get-function-permissions:
+ permission:
+  summary: 获取功能权限列表
+ tag: 用户角色
+ query-all:
+  summary: 获取角色列表（条件+分页）
+ add-role:
+  summary: 新增角色
+ delete:
+  summary: 删除角色
+ put:
+  summary: 修改角色
+ file:
+  id: 角色编号
+  name: 角色名称
+  data: 角色备注
+# tag: 角色查询
+# query-all: 
+  summary: 获取角色名称列表（条件+分页）
+ query-detail:
+  summary: 获取指定角色详情
+ field:
+  id: 角色唯一标识
+  name: 角色名称
+  data: 角色备注
+  root: 角色功能权限
+  auth: 角色数据权限
+  # 伞 一定要保留keyword
+  keyword: （可选）搜索关键词
+  # type: 节点类型
+  # operations: 操作项列表
+  # checked: 是否选中
+  # children: 子节点
+  # permissionTree: 功能权限树
+  # 伞 一定要保留下面这些，10/31 伞一定不要删除
+  function-permissions: 功能权限列表
+  role-name-list: 角色名称列表
+  permission-mainmodule-field-id: 主模块ID
+  permission-mainmodule-field-pid: 主模块所属菜单ID
+  permission-mainmodule-field-name: 主模块名称
+  permission-mainmodule-field-children: 子模块
+  permission-submodule-field-id: 子模块ID
+  permission-submodule-field-pid: 子模块所属菜单ID
+  permission-submodule-field-name: 子模块名称
+  permission-submodule-field-children: 权限项列表
+  permission-item-field-id: 权限项ID
+  permission-item-field-name: 权限项名称
+  permission-item-field-isenable: 是否禁用权限
+psi:
+   lisi: 李四
+   wu: 无
+
+# 日志系统
+log:
+ tag:
+  t1: 操作日志
+  t2: 操作日志
+ get:
+  summary: 分页查询日志数据
+ post:
+  summary: 新增日志数据
+ delete:
+  summary: 清空日志数据
+  clearedcount: 删除条数
+ example:
+  user: 管理员
+  info: 登入成功
+  begintime: 2222-2-2
+  endtime: 3333-3-3
+ field:
+  id: 编号
+  user: 操作用户
+  info: 操作内容
+  time: 操作时间
+  begintime: 开始时间
+  endtime: 结束时间
+
+# 系统设置
+sys:
+ field:
+  name: 配置名称
+  info: 配置内容
+  data: 备注信息
+  id: id
+ query: 
+  getMsg: 获取配置信息
+  putMsg: 保存配置信息
+ tag: 系统设置
+
+# 组织机构
+organization:
+ tag: 组织结构
+ query-all:
+  summary: 获取组织列表
+ query-one:
+  summary: 获取指定组织详情
+ query-tree:
+  summary: 获取组织结构树
+ add:
+  summary: 新增组织
+ modify:
+  summary: 修改指定组织
+ delete:
+  summary: 删除指定组织（支持批量）
+ field:
+  id: ID
+  pid: 所属ID
+  name: 组织名称
+  sort: 组织排序
+  remark: 备注信息
+  children: 组织结构
+ #tag: 组织管理
+ #query-all:
+ # summary: 获取组织列表
+ #query-one:
+ # summary: 获取指定组织详情
+ # add:
+ #  summary: 新增组织
+ # modify:
+ #  summary: 修改指定组织
+ # delete:
+ #  summary: 删除指定组织（支持批量）
+ # field:
+ #  id: ID
+ #  pid: 所属ID
+ #  name: 组织名称
+ #  sort: 组织排序
+ #  data: 备注信息
+org: 
+ add: 添加组织接口   
+ cha: 修改组织接口
+ del: 删除组织接口
+
+
+
+#人员管理
+per:
+ query-all:
+  summary: 获取人员列表（条件+分页）
+ query-one:
+  summary: 获取指定人员详情
+ tag: 人员管理
+ add-per:
+  summary: 新增人员
+ mod-per: 
+  summary: 修改指定人员
+ field:
+  id: 人员编号
+  name: 人员名称
+  card: 身份证号
+  sex: 人员性别
+  tel: 联系电话
+  frame: 所属组织
+  add: 联系地址
+  data: 备注信息
+  number: 人员编号
+
+#人员管理
+personnel:
+ tags:
+  t1: 人员管理
+ delete:
+  summary: 删除指定人员（支持批量）
+  personId: 删除人员id
+  success: 删除是否成功
+  message: 删除信息
+  total: 删除条数
+  succnt: 删除成功条数
+  failed: 删除失败条数
+  details: 具体删除信息
+  ids: 删除人员的编号
+ import:
+  summary: 导入数据
+ export:
+  summary: 导出数据
+ file:
+  name: 上传的文件
+  ids: 导出人员的编号
+ field:
+  id: ID
+  name: 人员名称
+  py: 拼音信息
+  number: 人员编号
+  frame: 所属组织
+  sex: 人员性别
+  tel: 联系电话
+  add: 联系地址
+  card: 身份证号
+  data: 备注信息
+  more: 扩展信息
+ error:
+  row: 错误行
+  field: 错误参数
+  value: 错误值
+  message: 错误信息
+ report:
+  total: 导入条数
+  success: 成功条数
+  failed: 失败条数
+  errors: 具体错误信息
+
+  
+
+
+
+# 用户管理
+user:
+ tag: 用户管理
+ query-all: 
+  summary: 获取用户列表(条件+分页)
+ query-one:
+  summary: 获取指定用户详情
+ add-user:
+  summary: 新增用户
+ mod-user:
+  summary: 修改用户
+ del-user:
+  summary: 删除用户
+ query-menu:
+  summary: 查询所有菜单
+ field:
+  id: 用户编号
+  age: 年龄
+  name: 昵称
+  frame: 所属组织
+  role: 所属角色
+  user: 登陆账号
+  tel: 手机号码
+  data: 备注信息
+  idCard: 身份证号码
+  img: 头像
+  imgUrl: 头像地址
+  py: 拼音信息
+  addresses: 收货地址
+  menuname: 菜单名称
+  menuicon: 图标名称
+  menuhref: 路由地址
+  menusub: 子菜单
+ #为返回user模块的中文操作结果而设置的字典
+ success: 操作成功
+ fail: 操作失败
+#删、改必填id
+ id:
+  form_error: id格式错误
+  length_error: id长度错误
+  empty_error: id不能为空
+  exist_error: 该id不存在
+#增必填name、user、tel、frame、role
+ name:
+  length_error: 名称长度超限
+  empty_error: 名称不能为空
+ user:
+  form_error: 账号格式错误
+  length_error: 账号长度超限
+  empty_error: 账号不能为空
+  exist_error: 该账号已被使用
+ tel:
+  form_error: 手机号码格式错误
+  length_error: 手机号码长度错误
+  empty_error: 手机号码不能为空
+  exist_error: 该手机号码已被使用
+ frame:
+  length_error: 组织长度超限
+  empty_error: 组织不能为空
+  exist_error: 该组织不存在
+ role:
+  length_error: 角色长度超限
+  empty_error: 角色不能为空
+  exist_error: 该角色不存在
+ pwd:
+  length_error: 密码长度超限
+ data:
+  length_error: 备注长度超限
+ #py:
+  #length_error: 拼音长度超限
+
+
+
+
+
+
+
+ # field:
+ #  id: 用户ID
+ #  name: 用户名
+ #  user: 账号
+ #  tel: 手机号码
+ #  role: 用户角色
+ #  frame: 所属架构
+ #  password: 用户密码
+ #  avatar: 用户头像
+ #  data: 备注信息
+ # field:
+ #  id: 用户ID
+ #  name: 用户名
+ #  user: 账号
+ #  tel: 手机号码
+ #  role: 用户角色
+ #  frame: 所属架构
+ #  password: 用户密码
+ #  avatar: 用户头像
+ #  data: 备注信息
+address:
+  tag: 收货地址示例接口
+  add-address: 
+   summary: 添加收货地址
+  field:
+   id: 收货地址编号
+   contact: 联系人姓名
+   phone: 手机号码
+   province: 省份
+   city: 城市
+   country: 区县
+   address: 详细地址
+   remark: 备注信息
+# sample
+sample:
+ tags:
+  t1: 基础示例接口
+  t2: 声明式服务示例接口
+ get:
+  summary: 分页查询示例数据
+ post:
+  summary: 新增一条示例数据
+ put:
+  summary: 修改一条示例数据
+ delete:
+  summary: 删除数据支持批量
+ query-by-id:
+  summary: 通过ID获取单条数据
+ export:
+  summary: 导出示例数据
+ query-one:
+  summary: 使用声明式服务查询一条数据
+ query-all:
+  summary: 使用声明式服务查询多条数据
+ field:
+  id: 编号
+  age: 年龄
+  name: 姓名
+  sex: 性别
+
+# file
+file:
+ tag: 文件示例接口
+ upload: 
+  summary: 单文件上传
+ upload-more:
+  summary: 多文件上传
+ upload-stream:
+  summary: 流上传文件
+ editor-upload-image:
+  summary: editor上传图片示例接口
+ info:
+  summary: 获取文件信息
+ download:
+  summary: 下载文件
+ html:
+  summary: HTML静态页面访问
+ field:
+  id: 文件编号
+  file: 要上传的文件
+  filename: 文件名
+  ft: 文件类型编码，如10001
+  ftn: 文件类型名称
+  st: 文件保存类型编码，如10001
+  stn: 文件保存类型名称
+  remark: 文件描述
+  path: 文件保存路径
+  status: 文件状态编码，1 使用，0 停用
+  suffix: 文件后缀
+  img-url: 图片src
+  img-alt: 图片文字描述
+  img-href: 图片链接地址
+
+# 单据编号
+receipt:
+ tag: 单据编号
+ query-all:
+  summary: 查询所有单据编号记录
+ add-number:
+  summary: 新增单据编号
+ delete-number:
+  summary: 删除单据编号记录
+ field:
+  NumberType: 单据类型
+  number: 编号
+  Create_time: 创建时间
+   
+# user:
+#  tag: 用户示例接口
+#  query-all: 
+#   summary: 查询所有用户
+#  query-one:
+#   summary: 查询用户详情
+#  add-user:
+#   summary: 新增用户
+#  query-menu:
+#   summary: 查询所有菜单
+#  field:
+#   id: 用户编号
+#   age: 年龄
+#   nickname: 昵称
+#   idCard: 身份证号码
+#   avatar: 头像编号
+#   avatarUrl: 头像地址
+#   addresses: 收货地址
+#   menuname: 菜单名称
+#   menuicon: 图标名称
+#   menuhref: 路由地址
+#   menusub: 子菜单
+# sample:
+#  tags:
+#   t1: 基础示例接口
+#   t2: 声明式服务示例接口
+#  get:
+#   summary: 分页查询示例数据
+#  post:
+#   summary: 新增一条示例数据
+#  put:
+#   summary: 修改一条示例数据
+#  delete:
+#   summary: 删除数据支持批量
+#  query-by-id:
+#   summary: 通过ID获取单条数据
+#  export:
+#   summary: 导出示例数据
+#  query-one:
+#   summary: 使用声明式服务查询一条数据
+#  query-all:
+#   summary: 使用声明式服务查询多条数据
+#  field:
+#   id: 编号
+#   age: 年龄
+#   name: 姓名
+#   sex: 性别
+# file:
+#  tag: 文件示例接口
+#  upload: 
+#   summary: 单文件上传
+#  upload-more:
+#   summary: 多文件上传
+#  upload-stream:
+#   summary: 流上传文件
+#  editor-upload-image:
+#   summary: editor上传图片示例接口
+#  info:
+#   summary: 获取文件信息
+#  download:
+#   summary: 下载文件
+#  html:
+#   summary: HTML静态页面访问
+#  field:
+#   id: 文件编号
+#   file: 要上传的文件
+#   filename: 文件名
+#   ft: 文件类型编码，如10001
+#   ftn: 文件类型名称
+#   st: 文件保存类型编码，如10001
+#   stn: 文件保存类型名称
+#   remark: 文件描述
+#   path: 文件保存路径
+#   status: 文件状态编码，1 使用，0 停用
+#   suffix: 文件后缀
+#   img-url: 图片src
+#   img-alt: 图片文字描述
+#   img-href: 图片链接地址
+# organization:
+#  tag: 组织管理
+#  query-all:
+#   summary: 获取组织列表
+#  query-one:
+#   summary: 获取指定组织详情
+#  add:
+#   summary: 新增组织
+#  modify:
+#   summary: 修改指定组织
+#  delete:
+#   summary: 删除指定组织（支持批量）
+#  field:
+#   id: ID
+#   pid: 所属ID
+#   name: 组织名称
+#   sort: 组织排序
+#   data: 备注信息
+# org: 
+#  add: 添加客户接口   
+#  cha: 修改客户接口
+#  del: 删除客户接口
+period:
+ tag: 结账管理
+ get:
+  summary: 获取结账列表
+ delete:
+  summary: 反结账
+ save:
+  summary: 结账
